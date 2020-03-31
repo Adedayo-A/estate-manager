@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+*, 
+*::before,
+ *::after {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: inherit;
+ }
+
+ html, body {
+     height: 100%;
+ }
+
+ body {
+   font-family: Arial, sans-serif;
+   font-family: Roboto, "Helvetica Neue", sans-serif;
+   box-sizing: border-box;
+   line-height: 1.7;
+   overflow: scroll;
+ }
+
+ .body {
+     /* background-color: #08829F; */
+     background-color: #062863;
+     height: 100%;
+ }
+
+.theme {
+    background-color: #3B5A95;
+}
+
+.text-color-white {
+    color: white;
+}
+
+.dp-flex {
+    display: flex;
+} 
+
+.flex-dir-col {
+    flex-direction: column;
+}
+
+.notextdecoration {
+    text-decoration: none;
+}
+
+.wdth-80 {
+    width: 80%;
+}
+
+.table {
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.m-auto {
+    margin-right: auto;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.height__100{
+    height: 100%;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-25 {
+    margin-right: 25px;
+}
+
+.mr-50 {
+    margin-right: 90px;
+}
+
+.w100 {
+    width: 100%;
+}

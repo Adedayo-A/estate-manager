@@ -1,0 +1,155 @@
+.signup__container {
+    width: 50%;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    /* display: table;
+    position: absolute;
+    top: 0;
+    left: 0; */
+    /* height: 100%; */
+    margin: auto;
+}
+
+.logo {
+    width: 70%;
+    margin: 0 auto 70px;
+    border: 1px solid;
+    border-radius: 4px;
+    /* border-color: whitesmoke; */
+    border-color: #EEE8AA;
+    /* border-color: #f4f4f4; */
+    /* background-color: lemonchiffon; */
+    justify-content: center;
+    padding: 3px;
+}
+
+.fa__icon__house {
+    color: burlywood;
+}
+
+.letters {
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.letters span:nth-child(1) {
+    color: #50BAFE;
+}
+  
+  .letters span:nth-child(2) {
+    color: #FF2100;
+  }
+  
+  .letters span:nth-child(3) {
+    color: #fff44f;
+  }
+
+  .letters span:nth-child(4) {
+    color: #E7F1FE;
+  }
+  
+  .letters span:nth-child(5) {
+    color: #8300fd;
+    color: #90539A;
+    color: green;;
+  }
+  
+  .letters span:nth-child(6) {
+    color: #FF5D00;
+    color: black;
+  }
+  
+  .letters span:nth-child(7) {
+    color: #F53A74;
+  }
+  
+  .letters span:nth-child(8) {
+    color: #CBE7A7;
+  }
+
+  .letters span:nth-child(9) {
+    color: white;
+  }
+  
+  .letters span:nth-child(10) {
+    color: blue;
+  }
+
+  .letters span:nth-child(11) {
+    color: white;
+  }
+  
+  .letters span:nth-child(12) {
+    color: purple;
+  }
+  
+  .letters span:nth-child(13) {
+    color: #3E819E;
+    color: #2FA430;
+    color: #E4E4E4;
+    /* color: rgba(0, 0, 0, 0.2); */
+  }
+
+.header__container {
+    margin-bottom: 5px;
+}
+
+.header-paragraph {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.fa__icon__running {
+    color: pink;
+}
+
+.child__container {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;
+    height: 450px;
+    /* background-color: #EDF0F3; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__container {
+    width: 400px;
+    height: 400px;
+    background-color: #EDF0F3;
+}
+
+.form__section-register-form {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    height: 350px;
+}
+.form__inputbtn {
+    width: 350px;
+    padding: 20px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0.9px solid rgba(0,0, 0, 0.3);
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.submit__button {
+    display: block;
+    margin-top: 1rem;
+    width: 350px;
+    height: 50px;
+    background-color: #A400B4;
+    color: rgba(255,255,255);
+    outline: none;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 0.9px;
+    border-radius: 0.3rem;
+}

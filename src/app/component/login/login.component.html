@@ -1,0 +1,43 @@
+<div class="signup__container">
+    <div class="child__container">
+        <div class="header__container">
+            <h2 class="logo dp-flex">
+                <span class="letters">
+                    <span> u </span>
+                    <span> l </span>
+                    <span> t </span>
+                    <span> i </span>
+                    <span> m </span>
+                    <span> a </span>
+                    <span> T </span>
+                    <span> e </span>
+                    <span> s </span>
+                    <span> t </span>
+                    <span> a </span> <span> t </span> <span> e </span>
+                    <fa-icon [icon]="fahouse" class="fa__icon__house"></fa-icon>
+                </span>
+            </h2>
+            <p class="text-color-white header-paragraph"> Manage Your Estate At A Go
+                <fa-icon [icon]="farunning" class="fa__icon__running"></fa-icon>
+            </p>
+        </div>
+        <div class="form__container">
+            <form class="dp-flex form__section-register-form" (ngSubmit)="login()" >
+                <input type="text" placeholder="Enter Username" [(ngModel)]="model.username" name="username" class="form__inputbtn"/> 
+                <input type="password" [(ngModel)]="model.password" name="password" placeholder="Enter Password" class="form__inputbtn" />
+                <input type="submit" value="Submit" class="submit__button" />
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <select id="role" class="form__inputbtn">
+    <option value="owner">Home Owner</option>
+    <option value="tenant"> Tenant</option>
+    <option value="security">Security</option>
+    <option value="staff">Home Staffs</option>
+</select> -->
+<!-- 
+<input type="password" placeholder="Enter Last Name" class="form__inputbtn" />
+<input type="password" placeholder="Enter Date Of Birth" class="form__inputbtn" />
+<input type="password" placeholder="Enter Occupation" class="form__inputbtn" /> -->

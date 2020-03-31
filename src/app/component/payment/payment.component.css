@@ -1,0 +1,51 @@
+.payment__container {
+    height: 100%;
+    background-color: white;
+}
+
+.text__heading {
+    margin-left: 100px;
+}
+
+.payment__wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bills__card {
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card {
+    height: 220px;
+    width: 70%;
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-1 {
+    background-color: #FFEAF5;
+}
+
+.card-2 {
+    background-color: #CCF0FE;
+}
+
+.card-3 {
+    background-color: #E7F6FF;
+}
+
+.card-4 {
+    background-color: #DCFFEB;
+}
+
+.card h2 {
+    text-align: center;
+    margin-top: 20%;
+}

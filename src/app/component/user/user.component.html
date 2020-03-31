@@ -1,0 +1,90 @@
+<div class="user__container">
+    <div class="div__header">
+        <h1> My Account </h1>
+        <h3> Adesegun Adedayo </h3>
+    </div>
+        <div class="dp-flex user__wrapper">
+            <div class="vertical __1">
+                <mat-card class="card">
+                    <h3 class="h-info"> My Account </h3>
+                    <fa-icon [icon]="faPlus" class="icon"></fa-icon>
+                </mat-card>
+            </div>
+            <div class="vertical __2">
+                <mat-card (click)="pop()" class="card">
+                    <h3 class="h-info"> Manage Users </h3>
+                    <fa-icon [icon]="faPlus" class="icon"></fa-icon>
+                </mat-card>
+            </div>
+            <!-- <div class="vertical __3">
+                <mat-card class="card">
+                    <h3 class="h-info"> Other Information </h3>
+                    <fa-icon [icon]="faPlus" class="icon"></fa-icon>
+                </mat-card>
+            </div> -->
+        </div>
+
+
+
+
+        <div *ngIf="popUp" class="pop__up dp-flex flex-dir-col">
+            <mat-card (click)="viewT()" class="card">
+                <h3 class="h-info"> View Staff </h3>
+                <fa-icon [icon]="faPlus" class="icon"></fa-icon>
+            </mat-card>
+            <mat-card (click)="addAUser()" class="card">
+                <h3 class="h-info"> Add Staff </h3>
+                <fa-icon [icon]="faPlus" class="icon"></fa-icon>
+            </mat-card>
+        </div>
+
+        <div *ngIf="addUser" class="form__container">
+            <form class="dp-flex form__section-register-form" >
+                <input type="text" placeholder="Enter Name" name="name" class="form__inputbtn"/> 
+                <input type="number" name="noofhouses" placeholder="Number Of Houses" class="form__inputbtn" />
+                <input type="text" name="Alias" placeholder="Enter Alias" class="form__inputbtn" />
+                <input type="submit" value="Submit" class="submit__button" />
+            </form>
+        </div>
+
+        <div *ngIf="viewTable" class="staff__table">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+                <!--- Note that these columns can be defined in any order.
+                    The actual rendered columns are set as a property on the row definition" -->
+            
+                <!-- Position Column -->
+                <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+            
+                <!-- Name Column -->
+                <ng-container matColumnDef="fname">
+                <th mat-header-cell *matHeaderCellDef> First Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.fname}} </td>
+                </ng-container>
+            
+                <!-- Weight Column -->
+                <ng-container matColumnDef="lname">
+                <th mat-header-cell *matHeaderCellDef> Last Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.lname}} </td>
+                </ng-container>
+            
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef> Type </th>
+                <td mat-cell *matCellDef="let element"> {{element.type }} </td>
+                </ng-container>
+
+            <!-- Symbol Column -->
+                <ng-container matColumnDef="phone">
+                    <th mat-header-cell *matHeaderCellDef> Phone Number </th>
+                    <td mat-cell *matCellDef="let element"> {{element.phone }} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+</div>

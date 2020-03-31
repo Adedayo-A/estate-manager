@@ -1,0 +1,58 @@
+.container {
+    height: 100%;
+    background-color: white;
+}
+
+.second__container {
+    height: 100%;
+}
+
+.panel {
+    background-color: #062863;
+    height: 100%;
+    width: 5%;
+    align-items: center;
+}
+
+.division__loggedin {
+    margin: 0 0 auto 0;
+}
+
+.division__hamburger {
+    margin-top: 30px;
+}
+
+.division__icon {
+    margin-top: 70px;
+}
+
+.division__logout {
+    margin-bottom: 20px;
+}
+
+.section__icon {
+    margin-top: 50px;
+}
+
+.hamburger__menu {
+    align-items: center;
+    /* background-color: hotpink; */
+}
+
+.hamburger__menu-span {
+    height: 2px;
+    width: 20px;
+    background-color: white;
+    margin-top: 4px;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.content__container{
+    /* background-color: indianred; */
+    padding-top: 60px;
+    width: 90%;
+    margin: 0 auto;
+}

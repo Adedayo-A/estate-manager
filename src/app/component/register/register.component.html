@@ -1,0 +1,18 @@
+<div class="signup__container">
+    <form class="dp-flex form__section-register-form" (ngSubmit)="register()" >
+        <input type="text" placeholder="Enter Email" [(ngModel)]="model.Email" name="Email" class="form__inputbtn"/> 
+        <input type="password" [(ngModel)]="model.Password" name="Password" placeholder="Enter Password" class="form__inputbtn" />
+        <input type="password" [(ngModel)]="model.ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password" class="form__inputbtn" />
+
+        <input type="submit" value="Submit" class="submit__button" />
+    </form>
+</div>
+
+<!-- <input type="password" placeholder="Enter Date Of Birth" class="form__inputbtn" />
+<input type="password" placeholder="Enter Occupation" class="form__inputbtn" />
+<select id="role" class="form__inputbtn">
+    <option value="owner">Home Owner</option>
+    <option value="tenant"> Tenant</option>
+    <option value="security">Security</option>
+    <option value="staff">Home Staffs</option>
+</select> -->

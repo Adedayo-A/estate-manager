@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="dp-flex second__container">
+        <div class="panel dp-flex flex-dir-col">
+            <div class="division__loggedin">
+                <div class="division__hamburger">
+                    <span class="hamburger__menu dp-flex flex-dir-col pointer">
+                        <span class="hamburger__menu-span"></span>
+                        <span class="hamburger__menu-span"></span>
+                        <span class="hamburger__menu-span"></span>
+                    </span>
+                    <!-- <fa-icon [icon]="faHamburger" class="text-color-white"></fa-icon> -->
+                </div>
+                <div class="division__icon">
+                    <!-- <section (click)="activeComponent = 1; activeIcon = 1" class="section__icon pointer">
+                        <fa-icon [icon]="faHome" class="icon text-color-white"></fa-icon>
+                        <h2>Home</h2>
+                    </section> -->
+                    <section (click)="activeComponent = 2; activeIcon = 2" class="section__icon pointer">
+                        <fa-icon [icon]="faRoad" class="icon text-color-white"></fa-icon>
+                        <!-- <h2>Roads</h2> -->
+                    </section>
+                    <section (click)="activeComponent = 3; activeIcon = 3" class="section__icon pointer">
+                        <fa-icon [icon]="faMoneyBill" class="icon text-color-white"></fa-icon>
+                        <!-- <h2>Payments</h2> -->
+                    </section>
+                    <section (click)="activeComponent = 4; activeIcon = 4" class="section__icon pointer">
+                        <fa-icon [icon]="faUser" class="icon text-color-white"></fa-icon>
+                        <!-- <h2>Add User</h2> -->
+                    </section>
+                </div>
+            </div>
+            <div class="division__logout pointer">
+                <fa-icon [icon]="faPowerOff" class="icon text-color-white"></fa-icon>
+                <!-- <h2>Logout</h2> -->
+            </div>
+        </div>
+        <div class="content__container">
+            <app-homepage *ngIf="activeComponent === 1"></app-homepage>
+            <app-roads *ngIf="activeComponent === 2"></app-roads>
+            <app-payment *ngIf="activeComponent === 3"></app-payment>
+            <app-user *ngIf="activeComponent === 4"></app-user>
+        </div>
+    </div>
+</div>
