@@ -1,90 +1,166 @@
+
+<app-nav></app-nav>
 <div class="user__container">
-    <div class="div__header">
-        <h1> My Account </h1>
-        <h3> Adesegun Adedayo </h3>
-    </div>
-        <div class="dp-flex user__wrapper">
-            <div class="vertical __1">
-                <mat-card class="card">
-                    <h3 class="h-info"> My Account </h3>
-                    <fa-icon [icon]="faPlus" class="icon"></fa-icon>
-                </mat-card>
+
+    <div class="dp-flex inner-c">
+
+        <div class="selection dp-flex flex-dir-col">
+
+            <div class="sects sects-heading dp-flex">
+                <div class="heading"> <span> CATEGORIES </span>
+                    <fa-icon [icon]="fapeople" class="icon"></fa-icon>
+                </div>
             </div>
-            <div class="vertical __2">
-                <mat-card (click)="pop()" class="card">
-                    <h3 class="h-info"> Manage Users </h3>
-                    <fa-icon [icon]="faPlus" class="icon"></fa-icon>
-                </mat-card>
+
+            <div class="sects dp-flex">
+                <div (click)="currPop = 1" class="div-header"> 
+                    Admin  
+                </div>
             </div>
-            <!-- <div class="vertical __3">
-                <mat-card class="card">
-                    <h3 class="h-info"> Other Information </h3>
-                    <fa-icon [icon]="faPlus" class="icon"></fa-icon>
-                </mat-card>
-            </div> -->
+
+
+            <div class="sects dp-flex">
+                <div (click)="currPop = 2" class="div-header"> SUPERVISORS </div>
+            </div>
+
+
+            <div class="sects dp-flex">
+                <div (click)="currPop = 3" class="div-header"> HOMEOWNERS </div>
+            </div>
+
+
+            <div class="sects dp-flex">
+                <div (click)="currPop = 4" class="div-header"> OCCUPANTS </div>
+            </div>
+
+
+            <div class="sects dp-flex">
+                <div (click)="currPop = 5" class="div-header"> SELF SERVICES </div>
+            </div>
         </div>
 
 
 
+        <!-- *ngIf = "currPop === 1" -->
 
-        <div *ngIf="popUp" class="pop__up dp-flex flex-dir-col">
-            <mat-card (click)="viewT()" class="card">
-                <h3 class="h-info"> View Staff </h3>
-                <fa-icon [icon]="faPlus" class="icon"></fa-icon>
-            </mat-card>
-            <mat-card (click)="addAUser()" class="card">
-                <h3 class="h-info"> Add Staff </h3>
-                <fa-icon [icon]="faPlus" class="icon"></fa-icon>
-            </mat-card>
+        <div *ngIf = "currPop === 1" class="dropdown-hide1 dp-flex">
+            <div *ngFor="let each of actionAdmin;">
+                <div class="col dp-flex _1">
+                    <div> {{ each }} </div>
+                </div>
+            </div>
         </div>
 
-        <div *ngIf="addUser" class="form__container">
+        <div *ngIf = "currPop === 2" class="dropdown-hide2 dp-flex">
+            <div *ngFor="let each of actionSupervisor;">
+                <div class="col dp-flex _2">
+                    <div> {{ each }} </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf = "currPop === 3" class="dropdown-hide3 dp-flex">
+            <div *ngFor="let each of actionHomeOwner;">
+                <div class="col dp-flex _3">
+                    <div> {{ each }} </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf = "currPop === 4" class="dropdown-hide4 dp-flex">
+            <div *ngFor="let each of actionOccupant;">
+                <div class="col dp-flex _4">
+                    <div> {{ each }} </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf = "currPop === 5" class="dropdown-hide5 dp-flex">
+            <div *ngFor="let each of actionHouseServices;">
+                <div class="col dp-flex _5">
+                    <div> {{ each }} </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        
+        
+        
+        
+        <!-- *ngIf = "addUserForm" -->
+        <div class="form__container">
             <form class="dp-flex form__section-register-form" >
-                <input type="text" placeholder="Enter Name" name="name" class="form__inputbtn"/> 
-                <input type="number" name="noofhouses" placeholder="Number Of Houses" class="form__inputbtn" />
-                <input type="text" name="Alias" placeholder="Enter Alias" class="form__inputbtn" />
+                <input type="text" placeholder="Enter Email" name="username" class="form__inputbtn"/>
+
+
+                <fieldset>
+                    <label>Role</label>
+                    <div>
+                        <select name="status" class="status" required>
+                            <option value="">Select role of User</option>
+                            <option value="supervisor">Supervisor</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <label> Type </label>
+                    <div>
+                        <select name="status" class="status" required>
+                            <option value="">Select type of Home Staff</option>
+                            <option value="driver"> Driver</option>
+                            <option value="chef"> Chef </option>
+                            <option value="househelp"> Househelp </option>
+                            <option value="others"> Others </option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <input type="password" name="password" placeholder="Enter Password" class="form__inputbtn" />
+                <input type="password" name="password" placeholder="Confirm Password" class="form__inputbtn" />
+                <input type="text" placeholder="Enter First Name" name="First Name" class="form__inputbtn"/>
+                <input type="text" placeholder="Enter Last Name" name="Last Name" class="form__inputbtn"/>
+                <input type="text" placeholder="Enter Phone Number" name="Phone No" class="form__inputbtn"/>
+                <input type="text" placeholder="Email" name="Email" class="form__inputbtn"/>
                 <input type="submit" value="Submit" class="submit__button" />
             </form>
         </div>
+                
+        <!-- *ngIf = "currPop === 1" -->
+        <div *ngIf = "viewUserTable" class="division__table">
+            <table mat-table [dataSource]="" class="mat-elevation-z8">
 
-        <div *ngIf="viewTable" class="staff__table">
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    
-                <!--- Note that these columns can be defined in any order.
-                    The actual rendered columns are set as a property on the row definition" -->
-            
-                <!-- Position Column -->
-                <ng-container matColumnDef="id">
-                <th mat-header-cell *matHeaderCellDef> Id </th>
-                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-                </ng-container>
-            
-                <!-- Name Column -->
                 <ng-container matColumnDef="fname">
                 <th mat-header-cell *matHeaderCellDef> First Name </th>
-                <td mat-cell *matCellDef="let element"> {{element.fname}} </td>
+                <td mat-cell *matCellDef="">  </td>
                 </ng-container>
             
-                <!-- Weight Column -->
                 <ng-container matColumnDef="lname">
                 <th mat-header-cell *matHeaderCellDef> Last Name </th>
-                <td mat-cell *matCellDef="let element"> {{element.lname}} </td>
+                <td mat-cell *matCellDef=""> </td>
                 </ng-container>
             
-                <!-- Symbol Column -->
-                <ng-container matColumnDef="type">
-                <th mat-header-cell *matHeaderCellDef> Type </th>
-                <td mat-cell *matCellDef="let element"> {{element.type }} </td>
+                <ng-container matColumnDef="role">
+                <th mat-header-cell *matHeaderCellDef> Role </th>
+                <td mat-cell *matCellDef=""> </td>
                 </ng-container>
 
-            <!-- Symbol Column -->
                 <ng-container matColumnDef="phone">
-                    <th mat-header-cell *matHeaderCellDef> Phone Number </th>
-                    <td mat-cell *matCellDef="let element"> {{element.phone }} </td>
-                </ng-container>
+                    <th mat-header-cell *matHeaderCellDef> Role </th>
+                    <td mat-cell *matCellDef=""> </td>
+                    </ng-container>
+
+                <ng-container matColumnDef="datejoined">
+                    <th mat-header-cell *matHeaderCellDef> Date Created </th>
+                    <td mat-cell *matCellDef=""> </td>
+                    </ng-container>
             
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
         </div>
+    </div>
 </div>

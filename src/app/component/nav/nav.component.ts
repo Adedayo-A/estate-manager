@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHouseUser, faUser, faCashRegister, faPowerOff } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 @Component({
@@ -10,6 +13,10 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 export class NavComponent implements OnInit {
 
   faSearch = faSearch;
+  faHouseUser = faHouseUser;
+  faUser = faUser;
+  faCashReg = faCashRegister;
+  faPowerOff = faPowerOff;
   constructor() { }
   ngOnInit(): void {
   }

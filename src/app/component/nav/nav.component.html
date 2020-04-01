@@ -1,4 +1,4 @@
-<nav class="_navbar theme">
+<nav class="_navbar">
     <div class="dp-flex  __navbar-inner-container m-auto">
         <div class="dp-flex logo-and-search">
             <ul class="_navbar__list-container">
@@ -23,28 +23,55 @@
                     <a routerLink="/about" routerLinkActive="active" class="router__links notextdecoration">About</a>
                 </li> -->
             </ul>
+
             <div class="searchform__outer__container">
-                <form class="dp-flex searchform">
-                    <input type="search" placeholder="Search Estates" class="inputtext__email search" />
-                    <button type="submit" class="button__login text-color-white"> Search </button>
+                <form class="searchform dp-flex">
+                    <span class="m-auto"></span>
+                    <input type="search" placeholder="Search Estates" class="inputtext__search search" />
+                    <button type="submit" class="button__search text-color-white"> Search </button>
                     <!-- <fa-icon [icon]="faSearch"></fa-icon> -->
                 </form>
             </div>
         </div>
+
+
+
         <div class="dp-flex other-links">
-            <div class="residences">
+            <!-- <div class="residences">
                 <a routerLink="/home" routerLinkActive="active" class="router__links notextdecoration">
-                    <span class="text-color-white"> RESIDENCES </span>
+                    <span class="text-color-white"> ESTATES </span>
+                </a>
+            </div> -->
+            <div class="residences ">
+                <a routerLink="/home" routerLinkActive="active" class="router__links notextdecoration">
+                    <div class="grouped dp-flex flex-dir-col">
+                        <fa-icon [icon]="faHouseUser" class="icon"></fa-icon>
+                        <span class="text-color-white"> My Estate </span>
+                    </div>
                 </a>
             </div>
             <div class="residences">
-                <a routerLink="/login" routerLinkActive="active" class="router__links notextdecoration">
-                    <span class="text-color-white"> LOGIN </span>
+                <a routerLink="/user" routerLinkActive="active" class="router__links notextdecoration">
+                    <div class="grouped dp-flex flex-dir-col">
+                        <fa-icon [icon]="faUser" class="icon"></fa-icon>
+                        <span class="text-color-white"> Users </span>
+                    </div>
+                </a>
+            </div>
+            <div class="residences">
+                <a routerLink="/home" routerLinkActive="active" class="router__links notextdecoration">
+                    <div class="grouped dp-flex flex-dir-col">
+                        <fa-icon [icon]="faCashReg" class="icon"></fa-icon>
+                        <span class="text-color-white"> Payment </span>
+                    </div>
                 </a>
             </div>
             <div class="residences">
                 <a routerLink="/register" routerLinkActive="active" class="router__links notextdecoration">
-                    <span class="text-color-white"> REGISTER </span>
+                    <div class="grouped dp-flex flex-dir-col">
+                        <fa-icon [icon]="faPowerOff" class="icon"></fa-icon>
+                        <span class="text-color-white"> Logout </span>
+                    </div>
                 </a>
             </div>
         </div>
@@ -65,4 +92,30 @@
         <button type="submit" class="button__login text-color-white">Log In</button>
     </form>
 </div>
+</div> -->
+
+<!-- <div class="residences">
+    <select>
+        <option>
+            <a routerLink="/register" routerLinkActive="active" class="router__links notextdecoration">
+                <span class="text-color-white"> ADD HOME OWNERS </span>
+            </a>
+        </option>
+        <option>
+            <a routerLink="/register" routerLinkActive="active" class="router__links notextdecoration">
+                <span class="text-color-white"> ADD OCCUPANTS </span>
+            </a>
+        </option>
+        <option>
+            <a routerLink="/register" routerLinkActive="active" class="router__links notextdecoration">
+                <span class="text-color-white"> ADD FAMILY/HOUSE SERVICES </span>
+            </a>
+        </option>
+    </select>
+</div> -->
+
+<!-- <div class="residences">
+    <a routerLink="/login" routerLinkActive="active" class="router__links notextdecoration">
+        <span class="text-color-white"> ADD STAFF </span>
+    </a>
 </div> -->

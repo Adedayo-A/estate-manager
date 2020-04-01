@@ -22,7 +22,7 @@
 
  .body {
      /* background-color: #08829F; */
-     background-color: #062863;
+     /* background-color: #062863; */
      height: 100%;
  }
 
@@ -32,6 +32,10 @@
 
 .text-color-white {
     color: white;
+}
+
+.text-color-black {
+    color: #000;
 }
 
 .dp-flex {
@@ -48,6 +52,10 @@
 
 .wdth-80 {
     width: 80%;
+}
+
+.w100 {
+    width: 100%;
 }
 
 .table {

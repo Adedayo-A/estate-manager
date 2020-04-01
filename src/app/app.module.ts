@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router'
 import { NgModule } from '@angular/core';
 import { JwtModule } from '@auth0/angular-jwt';
 import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +22,7 @@ import { PaymentComponent } from './component/payment/payment.component';
 import { UserComponent } from './component/user/user.component';
 
 export function tokenGetter() {
-  return localStorage.getItem("access_token");
+  return localStorage.getItem("token");
 }
 
 @NgModule({
@@ -39,6 +41,8 @@ export function tokenGetter() {
     BrowserModule,
     AppRoutingModule,
     MatTableModule,
+    MatFormFieldModule,
+    MatSelectModule,
     MatCardModule,
     HttpClientModule,
     JwtModule.forRoot({

@@ -1,44 +1,41 @@
 <div class="container">
-    <div class="dp-flex second__container">
-        <div class="panel dp-flex flex-dir-col">
-            <div class="division__loggedin">
-                <div class="division__hamburger">
-                    <span class="hamburger__menu dp-flex flex-dir-col pointer">
-                        <span class="hamburger__menu-span"></span>
-                        <span class="hamburger__menu-span"></span>
-                        <span class="hamburger__menu-span"></span>
-                    </span>
-                    <!-- <fa-icon [icon]="faHamburger" class="text-color-white"></fa-icon> -->
-                </div>
-                <div class="division__icon">
-                    <!-- <section (click)="activeComponent = 1; activeIcon = 1" class="section__icon pointer">
-                        <fa-icon [icon]="faHome" class="icon text-color-white"></fa-icon>
-                        <h2>Home</h2>
-                    </section> -->
-                    <section (click)="activeComponent = 2; activeIcon = 2" class="section__icon pointer">
-                        <fa-icon [icon]="faRoad" class="icon text-color-white"></fa-icon>
-                        <!-- <h2>Roads</h2> -->
-                    </section>
-                    <section (click)="activeComponent = 3; activeIcon = 3" class="section__icon pointer">
-                        <fa-icon [icon]="faMoneyBill" class="icon text-color-white"></fa-icon>
-                        <!-- <h2>Payments</h2> -->
-                    </section>
-                    <section (click)="activeComponent = 4; activeIcon = 4" class="section__icon pointer">
-                        <fa-icon [icon]="faUser" class="icon text-color-white"></fa-icon>
-                        <!-- <h2>Add User</h2> -->
-                    </section>
+    <app-nav></app-nav>
+    <div class="inner__c">
+        <div class="containers__box dp-flex">
+            <div class="col _A">A</div>
+            <div class="col _B">
+                <div class="color">
+                    <div class="row-c headin dp-flex">
+                        <div class="col _1 headin-txt">
+                            NAME
+                        </div>
+                        <div class="col _2 headin-txt">
+                            LOCATION
+                        </div>
+                        <div class="col _3 headin-txt">
+                            IMAGE
+                        </div>
+                    </div>
+                    <div class="dp-flex row-c" *ngFor="let estate of allEstates; let i=index">
+                        <div class="col _1">
+                            <div class="pointer">
+                                {{ estate.name }}
+                            </div>
+                        </div>
+                        <div class="col _2">
+                            <div class="pointer">
+                                {{ estate.location }}
+                            </div>
+                        </div>
+                        <div class="col _3">
+                            <div class="pointer">
+                                <img class="img-size" src="https://res.cloudinary.com/ddf91r8gu/image/upload/v1585711689/EstateImg.jpg" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="division__logout pointer">
-                <fa-icon [icon]="faPowerOff" class="icon text-color-white"></fa-icon>
-                <!-- <h2>Logout</h2> -->
-            </div>
-        </div>
-        <div class="content__container">
-            <app-homepage *ngIf="activeComponent === 1"></app-homepage>
-            <app-roads *ngIf="activeComponent === 2"></app-roads>
-            <app-payment *ngIf="activeComponent === 3"></app-payment>
-            <app-user *ngIf="activeComponent === 4"></app-user>
+            <div class="col _C">C</div>
         </div>
     </div>
 </div>

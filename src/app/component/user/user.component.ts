@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { faEye, faPlus } from '@fortawesome/free-solid-svg-icons';
+import {MatSelectModule} from '@angular/material/select';
+import { faEye, faPlus, faPeopleArrows } from '@fortawesome/free-solid-svg-icons';
+import decode from 'jwt-decode';
+import { UserService } from '../../services/user.service'
+import { UserAccount } from 'src/app/services/userAccount.services';
 
 export interface CurrentUsers {
   fname: string;
@@ -27,17 +31,105 @@ const ELEMENT_DATA: CurrentUsers[] = [
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  role: any;
+  allUsers: any;
 
-  constructor() { }
+  constructor(private repo : UserService, public auth : UserAccount) { }
 
   ngOnInit(): void {
+    this.getRole();
+    this.getActionAdmin();
+    this.getActionSupervisor();
+    this.getActionOrdinaryUser();
   }
 
   faEye = faEye;
   faPlus = faPlus;
+  fapeople = faPeopleArrows;
   popUp: boolean = false;
   addUser: boolean = false;
   viewTable: boolean = false;
+  actionAdmin: any = [];
+  actionSupervisor: any = [];
+  actionHomeOwner: any = [];
+  actionHouseServices: any = [];
+  actionOccupant: any = [];
+  currPop: number;
+  addUserForm: boolean = false;
+  viewUserTable: boolean = false;
+  supervisorForm: boolean;
+
+
+
+  getUsers() {
+    this.repo.getUsers().subscribe(
+      data => {
+        console.log(data);
+        this.allUsers = data;
+        setTimeout(() => {
+        }, 1000)
+      }, 
+      error => {
+        console.log(error);
+        setTimeout(() => {
+        }, 1000);
+      }
+    )
+  }
+
+  getRole() {
+    const token = localStorage.getItem('token');
+    const tokenPayload = decode(token);
+    this.role = tokenPayload.role
+    console.log("role is", this.role);
+  }
+
+  getActionAdmin() {
+    if(this.role === "Administrator") {
+      this.actionAdmin.push("View");
+      this.actionSupervisor.push("View");
+      this.actionSupervisor.push("Add");
+      this.actionHomeOwner.push("View");
+      this.actionHomeOwner.push("Add");
+      this.actionOccupant.push("View");
+      this.actionOccupant.push("Add");
+      this.actionHouseServices.push("View");
+      this.actionHouseServices.push("Add");
+      return;
+    }
+  }
+
+
+  getActionSupervisor() {
+    if(this.role === "Supervisor") {
+      this.actionAdmin.push("View");
+      this.actionSupervisor.push("View");
+      this.actionHomeOwner.push("View");
+      this.actionHomeOwner.push("Add");
+      this.actionHouseServices.push("View");
+      this.actionHouseServices.push("Add");
+      this.actionOccupant.push("View");
+      this.actionOccupant.push("Add");
+      return;
+    }
+  }
+
+  getActionOrdinaryUser() {
+    if(this.role === "User") {
+      this.actionSupervisor.push("View");
+      this.actionAdmin.push("View");
+      this.actionHomeOwner.push("View");
+      this.actionOccupant.push("View");
+      this.actionHouseServices.push("View");
+      return;
+    }
+  }
+
+  getaction (param : string) {
+    if (param === 'view') {
+      return 
+    }
+  }
 
   viewT() {
     this.addUser = false;
@@ -68,7 +160,7 @@ export class UserComponent implements OnInit {
     }
   }
 
-  displayedColumns: string[] = ['id', 'fname', 'lname', 'type', 'phone'];
+  displayedColumns: string[] = ['fname', 'lname', 'role', 'phone', 'datejoined'];
   dataSource = ELEMENT_DATA;
 
 
