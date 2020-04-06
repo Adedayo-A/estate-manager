@@ -1,376 +1,77 @@
-.user__container {
-    height: 80%;
+.container {
+    height: 100%;
     background-color: white;
+}
+
+.inner__c {
+    /* background-color: darkmagenta; */
+    height: 80%;
+}
+
+.containers__box {
     width: 100%;
-}
-
-.division__table {
-    width: 50%;
-    margin-left: 2%;
-}
-
-.inner-c {
-    display: flex;
-    margin-top: 20px;
+    margin: auto;
     height: 100%;
+    /* padding-top: 20px; */
 }
 
-table {
-    width: 100%;
-}
-
-/* Selection */
-
-.selection {
-    height: 100%;
-    margin-left: 4%;
+.column__a {
     width: 15%;
-    align-items: center;
-    border: 2px solid;
-    border-radius: 5px;
-    border-color: #f4f4f4;
-    box-shadow: 1px -5px 8px 3px #ccc;
-}
-
-.heading {
-    margin-top: 20px;
-}
-
-.sects-heading {
-
-}
-
-
-.heading > span {
-    margin-right : 10px;
-}
-
-.sects {
+    margin-right: 12%;
     height: 100%;
-    cursor: pointer;
+    padding-top: 28px;
+    padding-left: 41px;
+}
+
+
+.column__b {
+    margin-top: 30px;
+    width: 55%;
+}
+
+ .estate__container {
+    margin-top: 10px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid;
-    border-color: transparent;
-    border-bottom-color: #ccc;
+    border: 3px solid;
+    border-color: #f4f4f4;
+    margin-left: 4%;
+    /* box-shadow: 1px -5px 8px 3px #ccc; */
 }
 
-.div-header {
-    cursor: pointer;
-}
-
-.sects:nth-child(1) {
-}
-
-.dropdown-hide1 {
-    padding: 5% 0;
-    position: absolute;
-    left: 14%;
-    top: 19.5%;
-    /* box-shadow: inset 0 -2px 1px 0 rgba(255,255,255,.16), inset 0 0 0 2px rgba(0,0,0,.2); */
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    cursor: pointer;
-    animation-name: showDropDown;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-play-state: play;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    z-index: -1;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.dropdown-hide2 {
-    padding: 5% 0;
-    position: absolute;
-    left: 14%;
-    top: 31%;
-    /* box-shadow: inset 0 -2px 1px 0 rgba(255,255,255,.16), inset 0 0 0 2px rgba(0,0,0,.2); */
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    cursor: pointer;
-    animation-name: showDropDown;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-play-state: play;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    z-index: -1;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.dropdown-hide3 {
-    padding: 5% 0;
-    position: absolute;
-    left: 14%;
-    top: 43%;
-    /* box-shadow: inset 0 -2px 1px 0 rgba(255,255,255,.16), inset 0 0 0 2px rgba(0,0,0,.2); */
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    cursor: pointer;
-    animation-name: showDropDown;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-play-state: play;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    z-index: -1;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.dropdown-hide4 {
-    padding: 5% 0;
-    position: absolute;
-    left: 14%;
-    top: 56%;
-    /* box-shadow: inset 0 -2px 1px 0 rgba(255,255,255,.16), inset 0 0 0 2px rgba(0,0,0,.2); */
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    cursor: pointer;
-    animation-name: showDropDown;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-play-state: play;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    z-index: -1;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.dropdown-hide5 {
-    padding: 5% 0;
-    position: absolute;
-    left: 14%;
-    top: 70%;
-    /* box-shadow: inset 0 -2px 1px 0 rgba(255,255,255,.16), inset 0 0 0 2px rgba(0,0,0,.2); */
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    cursor: pointer;
-    animation-name: showDropDown;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-play-state: play;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    z-index: -1;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-._2 {
-    top: 15%;
-}
-
-@keyframes showDropDown {
-    0% {
-        transform: translateX(0px);
-        z-index: -1;
-    }
-    100% {
-       transform: translateX(20px);
-       z-index: 1;
-    }
-}
-
-
-
-.col {
-    width: 46px;
-    margin-top: 5px;
-    border: 1px solid;
-    border-color: #ccc;
-    border-radius: 3px;
-    justify-content: center;
-    background-color: #283E4A;
-    color: white;
-    font-size: 13px;
-}
-
-
-
-
-
-
-.div__header {
-    margin-left: 80px;
-}
-
-.user__wrapper {
-    width: 70%;
-    justify-content: space-around;
-}
-
-.vertical {
-    cursor: pointer;
-}
-
-.card {
+.inner__estate__container {
     display: flex;
-    width: 300px;
-}
-
-.h-info {
-    margin-right: auto;
-}
-
-
-.pop__up {
-    position: absolute;
-    left: 45%;
-    margin-top: 15px;
-}
-
-
-
-
-/******* ACCORDION ********/
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
-/********* FORM **********/
-/******* FORM ********/
-/* .form__container {
-    width: 471px;
-    height: 400px;
-    background-color: #EDF0F3;
-    position: absolute;
-    left: 66%;
-} */
-
-/* .form__section-register-form {
     flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    height: 350px;
-}
-.form__inputbtn {
-    width: 350px;
-    padding: 20px;
-    height: 40px;
-    border-radius: 5px;
-    border: 0.9px solid rgba(0,0, 0, 0.3);
-    box-shadow: none;
-    outline: none;
-    margin-bottom: 12px;
-}
-
-.submit__button {
-    display: block;
-    margin-top: 1rem;
-    width: 350px;
-    height: 50px;
-    background-color: #A400B4;
-    color: rgba(255,255,255);
-    outline: none;
-    box-shadow: none;
-    border-style: solid;
-    border-width: 0.9px;
-    border-radius: 0.3rem;
-} */
-
-.staff__table {
+    /* align-items: center; */
+    /* padding: 5%; */
     width: 100%;
-    position: absolute;
-    left: 66%;
+    margin: 0 auto;
+    border: 2px solid #283E4A;
 }
 
-
-/* ADD USER FORM */
-
-.form__container {
-    position: absolute;
-    left: 20%;
-    width: 400px;
-    /* height: 600px; */
-    background-color: #EDF0F3;
-}
-
-.form__section-register-form {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    /* height: 350px; */
-}
-.form__inputbtn {
-    width: 350px;
-    padding: 20px;
-    height: 40px;
-    border-radius: 5px;
-    border: 0.9px solid rgba(0,0, 0, 0.3);
-    box-shadow: none;
-    outline: none;
-    margin-bottom: 12px;
-}
-
-.submit__button {
-    display: block;
-    margin-top: 1rem;
-    width: 350px;
-    height: 50px;
-    background-color: #A400B4;
-    color: rgba(255,255,255);
-    outline: none;
-    box-shadow: none;
-    border-style: solid;
-    border-width: 0.9px;
-    border-radius: 0.3rem;
+.rows {
+    width: 100%;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-bottom-color: rgb(217, 214, 214);
     cursor: pointer;
-}
-
-
-
-fieldset {
-    border: 0;
-    margin-bottom: 1.5rem;
-}
-
-select {
-    width: 350px;
+    align-items: center;
     height: 40px;
-    border-radius: 5px;
-    border: 0.9px solid #efefef;
-    box-shadow: none;
-    outline: none;
-    margin-bottom: 12px;
-    color:#532380;
 }
 
-.placeholder::placeholder {
-    padding-left: 1rem;
+.headin-txt {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #283E4A;
+    justify-content: center;
 }
 
-legend {
-    color: #532380;
+.top {
+    height: 50px;   
 }
 
-legend {
-    font-size: 13px;
-    margin-bottom: 2rem;
+.img-size {
+    width: 180px;
+    height: 120px;
 }
 
-textarea {
-    border-radius: 5px;
-    border: 0.9px solid #efefef;
-    box-shadow: none;
-    outline: none;
-}
+

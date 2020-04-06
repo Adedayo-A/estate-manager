@@ -4,13 +4,11 @@
         <div class="heading__container dp-flex">
             <div class="page__heading dp-flex">
                 <div class="page__heading-text">
-                    <span> {{ estateName }} Estate</span>
+                    <span> Road </span>
                 </div>
-                <div *ngIf="role === 'Administrator' || 'Supervisor' ">
-                    <div (click) = "openDialog()" class="page__heading-add">
-                        <span class="span__text"> Add Road </span>
-                        <fa-icon [icon]="faPlus" class="icon"></fa-icon>
-                    </div>
+                <div class="page__heading-add">
+                    <span class="span__text"> Add Homes </span>
+                    <fa-icon [icon]="faPlus" class="icon"></fa-icon>
                 </div>
             </div>
         </div>
@@ -26,16 +24,16 @@
                             Number Of Homes
                         </div>
                     </div>
-                    <div *ngFor="let road of roadList; let i=index">
-                        <div class="dp-flex row-c" (click)="navigate(road.roadId, road.name)">
+                    <div>
+                        <div class="dp-flex row-c">
                             <div class="col _1">
                                 <div class="pointer">
-                                    {{ road.name}}
+                                
                                 </div>
                             </div>
                             <div class="col _2">
                                 <div class="pointer">
-                                    {{ road.noOfHomes }}
+                                    
                                 </div>
                             </div>
                         </div>

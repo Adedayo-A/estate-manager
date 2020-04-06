@@ -1,0 +1,44 @@
+<div class="container">
+    <app-nav></app-nav>
+    <div class="inner__c">
+        <div class="containers__box dp-flex">
+            <div class="column__a">
+              <app-mattree></app-mattree>  
+            </div>
+            <div class="column__b">
+                <div class="page__container">
+                    <div class="form__container">
+                        <!-- <mat-dialog-actions> -->
+                            <form class="dp-flex form__section-register-form" (ngSubmit)="postRoad()">
+                                <label> Add A Road </label>
+                                <input type="text" [(ngModel)]="model.name" name="name" placeholder="Enter Name" class="form__inputbtn"/>
+                                <input type="number" [(ngModel)]="model.noofhomes" name="noofhomes" placeholder="Enter Number Of Homes" class="form__inputbtn"/>
+                                <fieldset>
+                                    <label>Estates</label>
+                                    <div class="div__of__select">
+                                        <select name="id" [(ngModel)]="model.id" class="transmission">
+                                            <option value=""> Select an Estate </option>
+                                            <option *ngFor="let estate of estateList" [ngValue]="estate.name">
+                                                {{ estate.name }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <input type="submit" value="Add Road" class="submit__button" />
+                            </form>
+                        <!-- </mat-dialog-actions> -->
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

@@ -80,12 +80,21 @@
     padding: 4px;
 }
 
+.residences:hover {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1%;
+    /* background-color: white; */
+    color: black;
+}
+
 .router__links {
     color: white;
 }
 
 .grouped {
     align-items: center;
+    border: none;
 }
 
 

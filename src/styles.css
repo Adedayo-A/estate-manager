@@ -8,6 +8,10 @@
    box-sizing: inherit;
  }
 
+ .myapp-no-padding-dialog .mat-dialog-container {
+    padding: 0;
+  }
+
  html, body {
      height: 100%;
  }

@@ -1,41 +1,22 @@
-<div class="container">
+<app-get-estates></app-get-estates>
+
+
+
+
+<!-- <div class="container">
     <app-nav></app-nav>
-    <div class="inner__c">
+    <div [class.blurClass]="hideBlur" class="inner__c">
         <div class="containers__box dp-flex">
-            <div class="col _A">A</div>
-            <div class="col _B">
-                <div class="color">
-                    <div class="row-c headin dp-flex">
-                        <div class="col _1 headin-txt">
-                            NAME
-                        </div>
-                        <div class="col _2 headin-txt">
-                            LOCATION
-                        </div>
-                        <div class="col _3 headin-txt">
-                            IMAGE
-                        </div>
-                    </div>
-                    <div class="dp-flex row-c" *ngFor="let estate of allEstates; let i=index">
-                        <div class="col _1">
-                            <div class="pointer">
-                                {{ estate.name }}
-                            </div>
-                        </div>
-                        <div class="col _2">
-                            <div class="pointer">
-                                {{ estate.location }}
-                            </div>
-                        </div>
-                        <div class="col _3">
-                            <div class="pointer">
-                                <img class="img-size" src="https://res.cloudinary.com/ddf91r8gu/image/upload/v1585711689/EstateImg.jpg" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="column__a">
+              <app-mattree></app-mattree>  
             </div>
-            <div class="col _C">C</div>
+              
+            <div class="column__b">
+                <app-get-estates *ngIf="openedResult === 1 "></app-get-estates>
+                <app-user *ngIf="openedResult === 2"></app-user>
+                <app-form *ngIf="openedResult === 3"></app-form>
+            </div>
+
         </div>
     </div>
-</div>
+</div> -->

@@ -5,6 +5,7 @@ import { Values } from 'src/app/value.config';
 import { IEstate } from '../interfaces/iestate';
 
 import { Observable, of } from 'rxjs';
+import { Iestatedata } from '../interfaces/iestatedata';
 
 interface CurrentUsers {
   fname: string;
@@ -25,8 +26,25 @@ export class EstateService implements IEstate {
     this.currToken = tokenGetter();
     console.log(this.currToken);
   }
+
+  itemList: Iestatedata[];
+
+  getList() {
+    console.log('item list', this.itemList);
+    return this.itemList;
+  }
+
+  setList(itemlist) {
+    this.itemList.push(itemlist);
+    console.log('itemList', this.itemList);
+  }
+
+  postEstate(model) {
+    return this.http.post<any>(`${this.Url}api/estates`, model )
+  }
+  
   getEstate(): any {
-    return this.http.get<any>(`${this.Url}api/GetEstate`);
+    return this.http.get<any>(`${this.Url}api/estate/`);
   }
   currToken : string;
   Url : string;

@@ -1,0 +1,132 @@
+.container {
+    height: 100%;
+    background-color: white;
+}
+
+.inner__c {
+    /* background-color: darkmagenta; */
+}
+
+.heading__container {
+    width: 75%;
+    margin: 10px auto 0px;
+    height: 50px;
+    /* background-color: chartreuse; */
+}
+
+.page__heading {
+    width: 100%;
+    margin: 0 auto;
+    /* justify-content: space-around; */
+    /* background-color: #ccc; */
+    align-items: center;
+}
+
+
+.page__heading-text {
+    /* background-color: cadetblue; */
+    width: 30%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+
+.page__heading-add {
+    /* background-color: blueviolet; */
+    /* align-items: center; */
+    margin-right: 20%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #283E4A;
+    color: white;
+    cursor: pointer;
+}
+
+.span__text {
+    margin-right: 20px;
+}
+
+.containers__box {
+    width: 100%;
+    /* background-color: darkorange; */
+    margin: auto;
+    justify-content: center;
+}
+
+.col {
+    /* width: 28%; */
+}
+
+/* ._A, ._c {
+    width: 7%;
+} */
+._B {
+    margin-top: 10px;
+    width: 70%;
+    border: 3px solid;
+    border-color: #f4f4f4;
+    /* box-shadow: 1px -5px 8px 3px #ccc; */
+}
+
+.color {
+    width: 100%;
+}
+
+.row-c {
+    width: 100%;
+    justify-content: center;
+    margin-top: 14px;
+    border: 1px solid transparent;
+    border-bottom-color: rgb(217, 214, 214);
+}
+
+._1, ._2, ._3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-size {
+    width: 180px;
+    height: 120px;
+}
+
+.headin {
+    padding: 10px;
+}
+
+.headin-txt {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #283E4A;
+}
+
+._c {
+    margin-top: 20px;
+}
+
+.div-button {
+    width: 100%;
+}
+
+.create-estate {
+    width: 20%;
+    height: 30px;
+    background-color: #532380;
+    justify-content: space-around;
+    border: 1px solid;
+    border-radius: 5px;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+
+.create-estate > span:nth-child(2) {
+    font-size: 10px;
+}
+
+.blurClass {
+    filter: blur(5px);
+}

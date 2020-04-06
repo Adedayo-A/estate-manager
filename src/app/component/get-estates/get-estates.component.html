@@ -1,0 +1,52 @@
+<!-- <div class="estate__container"> -->
+    <div class="container">
+        <app-nav></app-nav>
+        <div [class.blurClass]="hideBlur" class="inner__c">
+            <div class="containers__box dp-flex">
+                <div class="column__a">
+                  <app-mattree></app-mattree>  
+                </div>
+                  
+                <div class="column__b">
+                    <div class="inner__estate__container">
+                        <div class="rows top dp-flex">
+                            <div class="col _1 dp-flex headin-txt">
+                                <span> NAME </span>
+                            </div>
+                            <div class="col _2 dp-flex headin-txt">
+                                <span> LOCATION </span>
+                            </div>
+                            <div class="col _3 dp-flex headin-txt">
+                                IMAGE
+                            </div>
+                        </div>
+                        <div class="content-container" *ngFor="let estate of itemList; let i=index">
+                            <div class="dp-flex rows">
+                                <div class="col col-1">
+                                    <div class="pointer">
+                                        {{ estate.name }}
+                                    </div>
+                                </div>
+                                <div class="col col-2">
+                                    <div class="pointer">
+                                        {{ estate.location }}
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="pointer">
+                                        <img class="img-size" src="https://res.cloudinary.com/ddf91r8gu/image/upload/v1585711689/EstateImg.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- </div> -->

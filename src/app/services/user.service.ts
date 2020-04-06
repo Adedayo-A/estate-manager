@@ -20,7 +20,7 @@ export class UserService implements IUser {
     return this.http.post<any>(`${this.Url}api/GetEstate`, model);
   }
   getUsers() {
-    return this.http.get<any>(`${this.Url}api/GetEstate`);
+    return this.http.get<any>(`${this.Url}api/user`);
   }
   getAUser() {
     return this.http.get<any>(`${this.Url}api/GetEstate`);

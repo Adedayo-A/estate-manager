@@ -41,6 +41,7 @@ export class UserComponent implements OnInit {
     this.getActionAdmin();
     this.getActionSupervisor();
     this.getActionOrdinaryUser();
+    this.getUsers();
   }
 
   faEye = faEye;
@@ -66,6 +67,7 @@ export class UserComponent implements OnInit {
       data => {
         console.log(data);
         this.allUsers = data;
+        // this.dataSource = data;
         setTimeout(() => {
         }, 1000)
       }, 
@@ -160,7 +162,7 @@ export class UserComponent implements OnInit {
     }
   }
 
-  displayedColumns: string[] = ['fname', 'lname', 'role', 'phone', 'datejoined'];
+  displayedColumns: string[] = ['fname'];
   dataSource = ELEMENT_DATA;
 
 

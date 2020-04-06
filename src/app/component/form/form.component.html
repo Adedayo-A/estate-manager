@@ -1,0 +1,25 @@
+<div class="container">
+    <app-nav></app-nav>
+    <div [class.blurClass]="hideBlur" class="inner__c">
+        <div class="containers__box dp-flex">
+            <div class="column__a">
+              <app-mattree></app-mattree>  
+            </div>
+            <div class="column__b">
+                <div class="page__container">
+                    <div class="form__container">
+                        <!-- <mat-dialog-actions> -->
+                            <form class="dp-flex form__section-register-form" (ngSubmit)="postEstate()">
+                                <label> Add An Estate </label>
+                                <input type="text" [(ngModel)]="model.name" name="name" placeholder="Enter Name" class="form__inputbtn"/>
+                                <input type="text" [(ngModel)]="model.location" name="location" placeholder="Enter Location" name="Email" class="form__inputbtn"/>
+                                <input type="submit" value="Add Estate" class="submit__button" />
+                            </form>
+                        <!-- </mat-dialog-actions> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
